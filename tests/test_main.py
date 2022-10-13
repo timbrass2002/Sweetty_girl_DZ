@@ -1,8 +1,14 @@
-from unittest import TestCase, main      # Добавление библиотеки unittests
+from unittest import TestCase, main
+
+import sys, os
+sys.path.append(os.getcwd())
+                                   # Добавление библиотеки unittests
 from main import _min                    #
 from main import _max                    # добавление функций из файла main.py
 from main import _sum                    #
-from main import _mult                   #
+from main import _mult
+
+
 
 
 class PyTest(TestCase):
