@@ -1,0 +1,17 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup repo files and python
+        uses: actions/checkout@v3
+        with:
+          python-version: "3.9.2"
+      - name: Install dependencies
+        run: |
+          python -m pipinstall --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: RUN TESTS
+        run: tests/test_main.py -v
