@@ -61,10 +61,11 @@ if __name__ == '__main__':
     file = open('text.txt')
     mas = list(map(int, file.read().split()))
 
-    #print(f"Сумма числе = {_sum(mas)}")
-    #print(f"Произведение чисел = {_mult(mas)}")
-    #print(f"Минимальное число = {_min(mas)}")
-    #print(f"Максимальное число = {_max(mas)}")
+    print(f"Сумма числе = {_sum(mas)}")
+    print(f"Произведение чисел = {_mult(mas)}")
+    print(f"Минимальное число = {_min(mas)}")
+    print(f"Максимальное число = {_max(mas)}")
+    print("for second commit")
 
     plt.plot(statistic_list)
     plt.show()
