@@ -11,7 +11,7 @@ jobs:
           python-version: "3.9.2"
       - name: Install dependencies
         run: |
-          python -m pipinstall --upgrade pip
+          python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: RUN TESTS
         run: tests/test_main.py -v
